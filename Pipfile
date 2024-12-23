@@ -5,12 +5,15 @@ name = "pypi"
 
 [packages]
 pydantic = "*"
+aiofiles = "*"
+aiohttp = "*"
 
 [dev-packages]
 pytest = "*"
 pytest-cov = "*"
 build = "*"
 twine = "*"
+httpx = {extras = ["socks"], version = "*"}
 
 [requires]
 python_version = "3.9"

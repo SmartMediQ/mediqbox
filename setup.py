@@ -28,5 +28,7 @@ setup(
   python_requires=">=3.9",
   install_requires=[
     "pydantic",
+    "aiofiles",
+    "aiohttp",
   ],
 )
