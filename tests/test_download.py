@@ -3,11 +3,16 @@ import os
 from mediqbox.download import *
 
 input_data = DownloadInputData(urls=[
-  "https://freetestdata.com/wp-content/uploads/2022/02/Free_Test_Data_1MB_MP4.mp4",
-  "https://freetestdata.com/wp-content/uploads/2021/09/Free_Test_Data_1MB_MP3.mp3",
-  "https://freetestdata.com/wp-content/uploads/2021/09/Free_Test_Data_1MB_PDF.pdf",
-  "https://freetestdata.com/wp-content/uploads/2021/09/png-1mb.png",
-  "https://freetestdata.com/wp-content/uploads/2023/04/2.4KB_JSON-File_FreeTestData.json",
+  "https://documents.un.org/doc/undoc/ltd/n20/189/21/pdf/n2018921.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-1.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-10.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-100.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-101.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-102.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-103.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-104.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-105.pdf",
+  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-106.pdf",
 ])
 
 output_dir = os.path.join(os.path.dirname(__file__), "output")

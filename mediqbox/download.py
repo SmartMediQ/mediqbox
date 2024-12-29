@@ -48,6 +48,7 @@ class DownloadOutputResult(OutputResult):
 
 class Downloader(AbstractComponent):
   def _process(self, data: DownloadInputData) -> DownloadOutputResult:
+    config: DownloadConfig = self.config
     async def download_file(
       session: aiohttp.ClientSession,
       url: str,
@@ -65,7 +66,7 @@ class Downloader(AbstractComponent):
           if (filename.startswith('"') and filename.endswith('"')) or (filename.startswith("'") and filename.endswith("'")):
             filename = filename[1:-1]
               
-          filepath = os.path.join(self.config.output_dir, filename)
+          filepath = os.path.join(config.output_dir, filename)
           async with aiofiles.open(filepath, "wb") as f:
             await f.write(await response.read())
           return filepath
@@ -75,7 +76,7 @@ class Downloader(AbstractComponent):
     
     async def download_files(urls: Iterable[str]) -> List[Optional[str]]:
       connector = aiohttp.TCPConnector(
-        limit=self.config.max_concurrency,
+        limit=config.max_concurrency,
         #keepalive_timeout=30,
       )
       async with aiohttp.ClientSession(
