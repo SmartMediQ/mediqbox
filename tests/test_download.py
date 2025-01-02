@@ -1,21 +1,14 @@
+import json
 import os
 
 from mediqbox.download import *
-
-input_data = DownloadInputData(urls=[
-  "https://documents.un.org/doc/undoc/ltd/n20/189/21/pdf/n2018921.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-1.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-10.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-100.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-101.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-102.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-103.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-104.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-105.pdf",
-  "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-106.pdf",
-])
+from tests import data_dir
 
 output_dir = os.path.join(os.path.dirname(__file__), "output")
+
+with open(os.path.join(data_dir, "mixed.json"), "r") as f:
+  download_urls = json.load(f).get("download_urls")
+  input_data = DownloadInputData(urls=download_urls)
 
 def test_download():
   # Remove files in target_dir
@@ -26,7 +19,7 @@ def test_download():
       
   config = DownloadConfig(
     output_dir=output_dir,
-    #max_concurrency=2,
+    max_concurrency=2,
   )
   downloader = Downloader(config)
   result = downloader.process(input_data)
