@@ -58,7 +58,7 @@ class Downloader(AbstractComponent):
           response.raise_for_status()
             
           header = response.headers.get("Content-Disposition")
-          if header:
+          if header and "filename=" in header:
             filename = unquote(header.split("filename=")[1])
           else:
             filename = unquote(os.path.basename(url))
