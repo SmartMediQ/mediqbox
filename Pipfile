@@ -15,6 +15,7 @@ pytest-cov = "*"
 build = "*"
 twine = "*"
 httpx = {extras = ["socks"], version = "*"}
+python-dotenv = "*"
 
 [requires]
 python_version = "3.9"

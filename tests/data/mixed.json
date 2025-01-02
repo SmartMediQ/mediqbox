@@ -10,5 +10,54 @@
     "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-104.pdf",
     "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-105.pdf",
     "https://ecosoc.un.org/sites/default/files/documents/2023/resolution-1989-106.pdf"
+  ],
+  "pubmed": [
+    {
+      "query": "10.1080/1120009X.2021.1937782[doi]",
+      "max_results": 1,
+      "doi": "10.1080/1120009X.2021.1937782"
+    },
+    {
+      "query": "10.1002/med.22012[doi]",
+      "max_results": 1,
+      "doi": "10.1002/med.22012"
+    },
+    {
+      "query": "PMC9039457",
+      "max_results": 1,
+      "doi": "",
+      "pub_types": ["Review"]
+    },
+    {
+      "query": "PMC7613836",
+      "max_results": 1,
+      "doi": "",
+      "pub_types": ["Meta-Analysis"]
+    },
+    {
+      "query": "PMC10214247",
+      "max_results": 1,
+      "doi": "",
+      "pub_types": ["Review"]
+    },
+    {
+      "query": "PMC11062565",
+      "max_results": 1,
+      "doi": "",
+      "pub_types": ["Clinical Trial, Phase II"]
+    },
+    {
+      "query": "PMC10453448",
+      "max_results": 1,
+      "doi": "",
+      "pub_types": ["Review"]
+    },
+    {
+      "query": "(((\"carcinoma\"[Title/Abstract] OR \"cancer\"[Title/Abstract]) AND \"esophageal\"[Title/Abstract]) AND \"Immunotherapy\"[Title/Abstract]) AND (\"2024/03/01\"[Date - Publication] : \"2024/03/31\"[Date - Publication])",
+      "pmid_only": true
+    },
+    {
+      "query": "(\"ADC\"[Title/Abstract] OR \"antibody-drug conjugate\"[Title/Abstract]) AND (\"Lung Cancer\"[Title/Abstract])"
+    }
   ]
 }
