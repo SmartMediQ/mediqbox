@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pydantic = "*"
 aiofiles = "*"
 aiohttp = "*"
 biopython = "*"
+pydantic = {extras = ["email"], version = "*"}
 
 [dev-packages]
 pytest = "*"
@@ -16,6 +16,7 @@ build = "*"
 twine = "*"
 httpx = {extras = ["socks"], version = "*"}
 python-dotenv = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.9"
